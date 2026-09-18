@@ -196,6 +196,9 @@ public class GetExtendedCampaignOverview {
   @SerializedName("utmID")
   private Integer utmID = null;
 
+  @SerializedName("utmId")
+  private String utmId = null;
+
   @SerializedName("testSent")
   private Boolean testSent = null;
 
@@ -604,6 +607,24 @@ public class GetExtendedCampaignOverview {
     this.utmID = utmID;
   }
 
+  public GetExtendedCampaignOverview utmId(String utmId) {
+    this.utmId = utmId;
+    return this;
+  }
+
+   /**
+   * The utm_id value applied to the campaign&#39;s tracking links, returned verbatim as a string. Falls back to your account&#39;s global UTM settings when no custom value was set on the campaign. Only returned when UTM tracking is enabled on the campaign and a value is set at one of these levels. Preferred field for new consumers — covers both numeric IDs and customer-supplied non-numeric strings.
+   * @return utmId
+  **/
+  @ApiModelProperty(example = "promo_042", value = "The utm_id value applied to the campaign's tracking links, returned verbatim as a string. Falls back to your account's global UTM settings when no custom value was set on the campaign. Only returned when UTM tracking is enabled on the campaign and a value is set at one of these levels. Preferred field for new consumers — covers both numeric IDs and customer-supplied non-numeric strings.")
+  public String getUtmId() {
+    return utmId;
+  }
+
+  public void setUtmId(String utmId) {
+    this.utmId = utmId;
+  }
+
   public GetExtendedCampaignOverview testSent(Boolean testSent) {
     this.testSent = testSent;
     return this;
@@ -922,6 +943,7 @@ public class GetExtendedCampaignOverview {
     ObjectUtils.equals(this.utmMedium, getExtendedCampaignOverview.utmMedium) &&
     ObjectUtils.equals(this.utmTerm, getExtendedCampaignOverview.utmTerm) &&
     ObjectUtils.equals(this.utmID, getExtendedCampaignOverview.utmID) &&
+    ObjectUtils.equals(this.utmId, getExtendedCampaignOverview.utmId) &&
     ObjectUtils.equals(this.testSent, getExtendedCampaignOverview.testSent) &&
     ObjectUtils.equals(this.header, getExtendedCampaignOverview.header) &&
     ObjectUtils.equals(this.footer, getExtendedCampaignOverview.footer) &&
@@ -942,7 +964,7 @@ public class GetExtendedCampaignOverview {
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(id, name, subject, previewText, type, status, scheduledAt, abTesting, subjectA, subjectB, splitRule, winnerCriteria, winnerDelay, sendAtBestTime, utmCampaignValue, utmContent, utmSource, utmMedium, utmTerm, utmID, testSent, header, footer, sender, replyTo, toField, htmlContent, shareLink, tag, createdAt, modifiedAt, inlineImageActivation, mirrorActive, recurring, sentDate, returnBounce);
+    return ObjectUtils.hashCodeMulti(id, name, subject, previewText, type, status, scheduledAt, abTesting, subjectA, subjectB, splitRule, winnerCriteria, winnerDelay, sendAtBestTime, utmCampaignValue, utmContent, utmSource, utmMedium, utmTerm, utmID, utmId, testSent, header, footer, sender, replyTo, toField, htmlContent, shareLink, tag, createdAt, modifiedAt, inlineImageActivation, mirrorActive, recurring, sentDate, returnBounce);
   }
 
 
@@ -971,6 +993,7 @@ public class GetExtendedCampaignOverview {
     sb.append("    utmMedium: ").append(toIndentedString(utmMedium)).append("\n");
     sb.append("    utmTerm: ").append(toIndentedString(utmTerm)).append("\n");
     sb.append("    utmID: ").append(toIndentedString(utmID)).append("\n");
+    sb.append("    utmId: ").append(toIndentedString(utmId)).append("\n");
     sb.append("    testSent: ").append(toIndentedString(testSent)).append("\n");
     sb.append("    header: ").append(toIndentedString(header)).append("\n");
     sb.append("    footer: ").append(toIndentedString(footer)).append("\n");
