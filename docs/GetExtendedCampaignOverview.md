@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **utmMedium** | **String** | medium parameter |  [optional]
 **utmTerm** | **String** | The utm_term value associated with the campaign. Only present if a utm_term value was set on create or update. |  [optional]
 **utmID** | **Integer** | utm id |  [optional]
+**utmId** | **String** | The utm_id value applied to the campaign&#39;s tracking links, returned verbatim as a string. Falls back to your account&#39;s global UTM settings when no custom value was set on the campaign. Only returned when UTM tracking is enabled on the campaign and a value is set at one of these levels. Preferred field for new consumers — covers both numeric IDs and customer-supplied non-numeric strings. |  [optional]
 **testSent** | **Boolean** | Retrieved the status of test email sending. (true&#x3D;Test email has been sent  false&#x3D;Test email has not been sent) | 
 **header** | **String** | Header of the campaign | 
 **footer** | **String** | Footer of the campaign | 
